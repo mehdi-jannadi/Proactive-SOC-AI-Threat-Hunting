@@ -22,7 +22,7 @@ The architecture consists of four main virtual machines:
 
 The collected security events are analyzed and presented to the SOC analyst through the Wazuh Dashboard.
 
-![Global Architecture](Architecture-globale-de-la-solution.png)
+![Global Architecture](Global-Architecture.png)
 
 ## 3. Technologies Used
 
@@ -50,7 +50,27 @@ The monitoring workflow includes:
 
 Detailed scenario descriptions and detection results can be added as individual sections as the project documentation develops.
 
-## 5. Security Knowledge Base
+## 5. Attack Scenarios and Detection Results
+
+Several attack scenarios were executed in the virtualized lab to evaluate the SOC's monitoring and detection capabilities.
+
+| Attack Scenario | Execution Status | Detection Result |
+|---|---|---|
+| Network Reconnaissance (Nmap) | Executed | Successfully detected |
+| RDP Brute-Force Attack | Executed | Successfully detected |
+| Privilege Escalation | Executed | Successfully detected |
+| Data Exfiltration | Executed | Successfully detected |
+| AI Agent Monitoring and LLM Security Tests | Executed | Relevant security events detected |
+| Man-in-the-Middle (MITM) | Executed | No relevant alert detected |
+| Distributed Denial-of-Service (DDoS) | Executed | No relevant alert detected |
+
+These experiments helped evaluate the monitoring capabilities of the lab and identify areas where detection coverage could be improved.
+
+While several scenarios generated relevant security alerts, the MITM and DDoS experiments did not produce relevant alerts in the tested configuration. These results highlight the importance of validating detection rules, reviewing available telemetry, and identifying potential monitoring gaps.
+
+The results are specific to the configurations and conditions tested in this laboratory and should not be interpreted as a general assessment of Wazuh's detection capabilities.
+
+## 6. Security Knowledge Base
 
 A security knowledge base was designed to bring together several sources of information, including:
 
@@ -61,7 +81,7 @@ A security knowledge base was designed to bring together several sources of info
 
 The purpose of this knowledge base is to provide relevant security context for alert analysis and investigation.
 
-## 6. RAG-Based AI Assistant
+## 7. RAG-Based AI Assistant
 
 The project includes an AI-assisted analysis component based on Retrieval-Augmented Generation (RAG).
 
@@ -74,13 +94,13 @@ The general workflow is:
 
 The assistant is intended to support the analyst's investigation rather than replace human judgment.
 
-## 7. Project Scope and Limitations
+## 8. Project Scope and Limitations
 
 This project was developed in a virtualized laboratory environment for experimentation and learning.
 
 Its results reflect the scenarios and configurations tested in that environment. They should not be interpreted as proof of production readiness or universal detection effectiveness.
 
-## 8. Future Improvements
+## 9. Future Improvements
 
 Potential areas for further development include:
 
@@ -90,6 +110,6 @@ Potential areas for further development include:
 - Evaluating the accuracy and reliability of RAG-based recommendations.
 - Improving the integration between security monitoring and AI-assisted investigation.
 
-## 9. Disclaimer
+## 10. Disclaimer
 
 This project is intended for educational and defensive cybersecurity purposes. Attack simulations should only be performed in authorized and controlled environments.
