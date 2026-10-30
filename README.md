@@ -22,7 +22,7 @@ The architecture consists of four main virtual machines:
 
 The collected security events are analyzed and presented to the SOC analyst through the Wazuh Dashboard.
 
-![Global Architecture](docs/architecture.png)
+![Global Architecture](Architecture-globale-de-la-solution.png)
 
 ## 3. Technologies Used
 
